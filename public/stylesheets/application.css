@@ -76,58 +76,58 @@ html {
 
 /* Typography -------------------------------------------------------------- */
 /* The following classes are for use with @extend. */
-/* line 14, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 14, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 18, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 18, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .serif {
   font-family: Cambria, Georgia, serif;
 }
 
-/* line 21, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 21, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .sans, body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 24, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 24, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .mono, pre, code, tt {
   font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
 }
 
-/* line 27, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 27, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .caps, .allcaps, caption, .smallcaps, h4 {
   letter-spacing: 0.1em;
 }
 
-/* line 30, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 30, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .allcaps, caption {
   text-transform: uppercase;
 }
 
-/* line 34, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 34, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .smallcaps, h4 {
   font-variant: small-caps;
 }
 
 /* Body -------------------------------------------------------------- */
-/* line 40, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 40, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 body {
   color: #4c4c4c;
 }
 
 /* Selected Text -------------------------------------------------------------- */
 /* -moz- must be declared separately */
-/* line 53, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 53, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 ::-moz-selection {
   color: white;
   background: #005498;
   text-shadow: none;
 }
 
-/* line 58, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 58, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 ::selection {
   color: white;
   background: #005498;
@@ -135,124 +135,124 @@ body {
 }
 
 /* Links -------------------------------------------------------------- */
-/* line 66, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 66, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 a:link, a:visited {
   color: #005498;
 }
-/* line 68, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 68, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 a:link, a:visited, a:hover, a:active {
   outline: none;
 }
-/* line 70, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 70, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 a:focus, a:hover, a:active {
   color: #005498;
   text-decoration: underline;
 }
-/* line 73, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 73, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 a:focus {
   outline: thin dotted;
 }
 
 /* Headings -------------------------------------------------------------- */
-/* line 78, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 78, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 h2, h3, h4, h5, h6 {
   margin-bottom: 1.5em;
 }
 
-/* line 81, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 81, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 h1 {
   font-size: 1.3125em;
   line-height: 2.28571em;
   margin-bottom: 1.14286em;
 }
 
-/* line 88, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 88, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 h3 {
   font-weight: bold;
 }
 
-/* line 91, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 91, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 h4 {
   text-transform: lowercase;
 }
 
-/* line 95, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 95, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 h5, h6 {
   font-style: italic;
 }
 
 /* Inline -------------------------------------------------------------- */
-/* line 100, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 100, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 cite, em, dfn, address, i {
   font-style: italic;
 }
 
-/* line 103, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 103, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 strong, dfn, b {
   font-weight: bold;
 }
 
-/* line 106, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 106, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 sup, sub {
   font-size: smaller;
   line-height: 0;
 }
 
-/* line 110, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 110, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 sup {
   vertical-align: super;
 }
 
-/* line 113, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 113, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 sub {
   vertical-align: sub;
 }
 
-/* line 116, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 116, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 abbr, acronym {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 120, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 120, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 ins {
   text-decoration: underline;
 }
 
-/* line 123, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 123, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 126, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 126, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 mark {
   background: #ffff99;
   background-color: rgba(255, 255, 0, 0.5);
   text-shadow: none;
 }
 
-/* line 131, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 131, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 small {
   font-size: 0.75em;
   line-height: 2em;
 }
 
-/* line 134, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 134, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 q {
   font-style: italic;
 }
-/* line 136, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 136, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 q em {
   font-style: normal;
 }
 
 /* Block -------------------------------------------------------------- */
-/* line 144, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 144, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 147, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 147, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 pre {
   margin: 1.5em;
   white-space: pre;
@@ -261,14 +261,14 @@ pre {
   word-wrap: break-word;
 }
 
-/* line 154, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 154, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 blockquote {
   margin: 1.5em;
   font-style: italic;
 }
 
 /* Replaced -------------------------------------------------------------- */
-/* line 160, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 160, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 img {
   vertical-align: text-bottom;
   max-width: 100%;
@@ -276,40 +276,40 @@ img {
 }
 
 /* Lists -------------------------------------------------------------- */
-/* line 167, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 167, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 ol, ul, dl {
   margin-bottom: 1.5em;
   margin-left: 1.5em;
 }
 
-/* line 171, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 171, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 174, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 174, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 ul {
   list-style: disc;
 }
-/* line 176, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 176, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 li ul {
   list-style-type: circle;
 }
 
-/* line 179, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 179, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 dt {
   margin-top: 1.5em;
   font-style: italic;
 }
 
-/* line 183, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 183, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 dd {
   padding-left: 1.5em;
 }
 
 /* Tables -------------------------------------------------------------- */
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 189, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 189, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 table {
   margin-bottom: 1.5em;
   width: 100%;
@@ -317,38 +317,38 @@ table {
   border-spacing: 0;
 }
 
-/* line 195, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 195, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 table, td, th {
   vertical-align: top;
 }
 
-/* line 198, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 198, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 th, thead th {
   font-weight: bold;
 }
 
-/* line 201, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 201, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 th, td, caption {
   padding: 0.75em;
   text-align: left;
   font-weight: normal;
 }
 
-/* line 206, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 206, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 table, th {
   border-bottom-style: solid;
   border-bottom-width: 0.0625em;
   padding-bottom: 0.6875em;
 }
 
-/* line 209, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 209, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 tfoot {
   font-size: 0.875em;
   line-height: 1.71429em;
 }
 
 /* Forms -------------------------------------------------------------- */
-/* line 217, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 217, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 fieldset {
   margin-bottom: 1.5em;
   border-style: solid;
@@ -356,29 +356,29 @@ fieldset {
   padding: 1.4375em;
 }
 
-/* line 221, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 221, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 legend {
   font-size: 1.125em;
   line-height: 1.33333em;
   font-weight: bold;
 }
 
-/* line 225, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 225, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 input[type="radio"], input[type="checkbox"] {
   vertical-align: baseline;
 }
 
-/* line 228, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 228, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 label, input[type=button], input[type=submit], button {
   cursor: pointer;
 }
 
-/* line 231, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 231, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 label {
   font-weight: bold;
 }
 
-/* line 236, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 236, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 .textinput, textarea, input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color] {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.875em;
@@ -395,28 +395,28 @@ label {
   height: 2.57143em;
 }
 
-/* line 246, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 246, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 textarea {
   height: 11.14286em;
   vertical-align: text-bottom;
 }
 
-/* line 257, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 257, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 input[type=search] {
   -webkit-appearance: none;
 }
-/* line 259, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 259, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 input[type=search]::-webkit-search-decoration {
   display: none;
 }
 
-/* line 262, /Users/jamescroft/Simple-Site/source/stylesheets/_defaults.scss */
+/* line 262, /Users/jamescroft/Development/simple-site/source/stylesheets/_defaults.scss */
 button {
   width: auto;
   overflow: visible;
 }
 
-/* line 4, /Users/jamescroft/Simple-Site/source/stylesheets/application.scss */
+/* line 4, /Users/jamescroft/Development/simple-site/source/stylesheets/application.scss */
 .container {
   *zoom: 1;
   margin: auto;
