@@ -1,20 +1,21 @@
 require "rake-pipeline-web-filters"
 require 'susy'
 
-input "source"
-output "public"
+input "source" do
+  output "public"
 
-match "*.haml" do
-  filter Rake::Pipeline::Web::Filters::TiltFilter do |input|
-    input.sub(/\.haml$/, '.html')
+  match "*.haml" do
+    filter Rake::Pipeline::Web::Filters::TiltFilter do |input|
+      input.sub(/\.haml$/, '.html')
+    end
   end
-end
 
-match "*.coffee" do
-  filter Rake::Pipeline::Web::Filters::CoffeeScriptFilter
-end
+  match "*.coffee" do
+    filter Rake::Pipeline::Web::Filters::CoffeeScriptFilter
+  end
 
-match "*.scss" do
-  filter Rake::Pipeline::Web::Filters::SassFilter,
-    :additional_load_paths => 'source/stylesheets'
+  match "*.scss" do
+    filter Rake::Pipeline::Web::Filters::SassFilter,
+      :additional_load_paths => 'source/stylesheets'
+  end
 end
