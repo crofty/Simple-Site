@@ -6,5 +6,79 @@
     %link{href:'stylesheets/application.css', rel:"stylesheet", type:"text/css"}
   %body.show-rhythm
     .container.show-grid
-      %h1 Simple Site
+      %h1 Typography
+
+      %h2 Headings
+      .example
+        %h1 h1. Heading 1
+        %h2 h2. Heading 2
+        %h3 h3. Heading 3
+        %h3 h4. Heading 4
+        %h3 h5. Heading 5
+        %h3 h6. Heading 6
+
+      %h2 Body copy
+      .example
+        %p Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+        %p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+        %p Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+      %h1 Buttons
+      .example
+        %p
+          %button.btn Default (button)
+          %a.btn Default (a)
+
+      %h1 Forms
+      %h2 Default styles
+      .example
+        %form
+          %legend Legend
+          %label Label name
+          %input{type: 'text', placeholder: 'Type something..'}
+          %span.help-block Example block-level help text here.
+          %label.checkbox
+            %input{type: 'checkbox'} Check me out
+          %button.btn Submit
+
+      %h2 Inline form
+      .example
+        %form.form-inline
+          %input{type: 'text', placeholder: 'Email'}
+          %input{type: 'password', placeholder: 'Password'}
+          %label.checkbox
+            %input{type: 'checkbox'} Remember me
+          %button.btn Sign in
+
+      %h2 Horizontal form
+      .example
+        %form.form-horizontal
+          .control-group
+            %label.control-label Email
+            .controls
+              %input{type: 'text', placeholder: 'Email'}
+          .control-group
+            %label.control-label Password
+            .controls
+              %input{type: 'password', placeholder: 'Password'}
+          .control-group
+            .controls
+              %label.checkbox
+                %input{type: 'checkbox'} Remember me
+              %button.btn Sign in
+
+      %h2 Extended form controls
+      .example
+        .input-append
+          %input.span2{type: 'text'}
+          %button.btn Go!
+
+      %h3 Search form
+      .example
+        %form.form-search
+          .input-append
+            %input.search-query{type: 'text'}
+            %button.btn Search
+
+
     %script{type:'text/javascript', src:'/javascripts/compiled.js'}

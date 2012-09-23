@@ -22,7 +22,7 @@ input "source" do
       ], "/javascripts/compiled.js"
   end
 
-  match "*.scss" do
+  match "application.scss" do
     filter Rake::Pipeline::Web::Filters::SassFilter,
       :additional_load_paths => 'source/stylesheets'
   end

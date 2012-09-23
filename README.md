@@ -9,3 +9,6 @@ To run the site locally with
 If you want to compile the assets without running the server, run
 
     bundle exec rakep
+
+
+The site uses styles from the scss version of twitter bootstrap, the styles are grabbed from this repo: git://github.com/yury/bootstrap.git
