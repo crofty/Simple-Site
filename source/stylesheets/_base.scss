@@ -15,17 +15,3 @@ $show-grid-backgrounds: true;
 
 $base: #4c4c4c;
 $alt: #005498;
-
-// Fonts --------------------------------------------------------------
-
-@mixin sans-family {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-@mixin serif-family {
-  font-family: Cambria, Georgia, serif;
-}
-
-@mixin monospace-family {
-  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
-}
