@@ -17,7 +17,8 @@ input "source" do
   match "**/*.js" do
     filter Rake::Pipeline::OrderingConcatFilter,
       [
-        "javascripts/vendor/jquery-1.8.2.min.js"
+        "javascripts/vendor/jquery-1.8.2.min.js",
+        "javascripts/vendor/keymaster.min.js"
       ], "/javascripts/compiled.js"
   end
 
