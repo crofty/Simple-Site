@@ -1,6 +1,6 @@
 @import "susy";
 @import "defaults";
 
-.container{
-  @include container;
-}
+.container{ @include container; }
+.show-rhythm{ @include debug-vertical-alignment; }
+.show-grid{ @include susy-grid-background; }
