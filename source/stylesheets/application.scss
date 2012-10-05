@@ -1,29 +1,9 @@
-@import "susy";
-@import "defaults";
+@import "base/base";
+@import "compass/reset";
+@import "general/root";
+@import "helpers/helpers";
 
-$baseFontSize: $base-font-size;
-$baseLineHeight: $base-line-height;
-
-@import "bootstrap/bootstrap.scss"; 
-
-@include establish-baseline;
-
-.container{ @include container; }
-.show-rhythm{ @include debug-vertical-alignment; }
-.show-grid{ @include susy-grid-background; }
-
-h1, h2, h3, h4, h5{
-  @include adjust-font-size-to($base-font-size);
-  @include leader(0);
-  @include trailer(1);
-}
-p{
-  @include trailer(0);
-  @include adjust-font-size-to($base-font-size);
-  @include trailer(1);
+#index{
+  @extend %template;
 }
 
-.example{
-  @include rhythm-borders(2px, 1);
-  @include trailer(1);
-}

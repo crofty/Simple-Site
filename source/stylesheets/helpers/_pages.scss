@@ -1,0 +1,95 @@
+// ----------------------------------------------------------------------------
+// show baseline grid
+
+%baseline {
+  &::before {
+    @include stretch;
+    @include baseline-grid-background;
+    content: " ";
+  }
+}
+
+// ----------------------------------------------------------------------------
+// pageturn mixin
+
+$page-enter     : fadeInLeft fadeInRight;
+$page-exit      : fadeOutLeft fadeOutRight;
+$page-time      : 200ms;
+$page-function  : ease;
+
+@function get-pageturn(
+  $enter    : $page-enter,
+  $exit     : $page-exit,
+  $time     : $page-time,
+  $function : $page-function
+) {
+  $enter    : if(type-of($enter) != 'list', $enter $enter, $enter);
+  $exit     : if(type-of($exit) != 'list', $exit $exit, $exit);
+  $time     : if(type-of($time) != 'list', $time $time, $time);
+
+  $inPrev   : nth($enter,1) nth($time,1) $function;
+  $inNext   : nth($enter,2) nth($time,1) $function;
+  $outPrev  : nth($exit,1)  nth($time,2) $function;
+  $outNext  : nth($exit,2)  nth($time,2) $function;
+
+  @return $inPrev $inNext $outPrev $outNext;
+}
+
+@mixin pageturn(
+  $enter    : $page-enter,
+  $exit     : $page-exit,
+  $time     : $page-time,
+  $function : $page-function,
+  $nested   : false
+) {
+  $enter    : if(type-of($enter) != 'list', $enter $enter, $enter);
+  $exit     : if(type-of($exit) != 'list', $exit $exit, $exit);
+  $time     : if(type-of($time) != 'list', $time $time, $time);
+
+  $inPrev   : if($nested, '&.enter-prev', '.enter-prev');
+  $inNext   : if($nested, '&.enter-next', '.enter-next');
+  $outPrev  : if($nested, '&.exit-prev', '.exit-prev');
+  $outNext  : if($nested, '&.exit-next', '.exit-next');
+
+  // output the animations
+  #{$inPrev}  { @extend %#{nth($enter,1)}; }
+  #{$inNext}  { @extend %#{nth($enter,2)}; }
+  #{$outPrev} { @extend %#{nth($exit,1)}; }
+  #{$outNext} { @extend %#{nth($exit,2)}; }
+
+  // set the duration
+  #{$inPrev}, #{$inNext}    { @include animation-duration(nth($time,1)); }
+  #{$outPrev}, #{$outNext}  { @include animation-duration(nth($time,2)); }
+
+  // set the function
+  #{$inPrev}, #{$inNext}, #{$outPrev}, #{$outNext} {
+    @include animation-timing-function($function);
+  }
+}
+
+@mixin page-animation($animations...) {
+  @include animation($animations...);
+  &.enter-prev { @include animation(nth(get-pageturn(),1), $animations); }
+  &.enter-next { @include animation(nth(get-pageturn(),2), $animations); }
+  &.exit-prev  { @include animation(nth(get-pageturn(),3), $animations); }
+  &.exit-next  { @include animation(nth(get-pageturn(),4), $animations); }
+}
+
+// ----------------------------------------------------------------------------
+// pagepadding
+
+@mixin pagespace($property, $hspace...) {
+  @each $pair in $hspace {
+    $height: rhythm(nth($pair,1));
+    $top-padding: rhythm(nth($pair,2));
+    $bottom-padding: $top-padding;
+    @if length($pair) > 2 { $bottom-padding: nth($pair,3); }
+    @include breakpoint(min-height $height) { //;
+      #{$property}-top: $top-padding;
+      #{$property}-bottom: $bottom-padding;
+    }
+  }
+}
+
+@mixin pagepad($hpad...) { @include pagespace(padding, $hpad...); }
+@mixin pagemargin($hmargin...) { @include pagespace(margin, $hmargin...); }

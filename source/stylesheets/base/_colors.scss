@@ -1,0 +1,75 @@
+// ----------------------------------------------------------------------------
+// colors
+
+$rainbow          : red orange yellow green cyan blue pink;
+
+$red              : hsla(0,   100%, 50%,  1);
+$orange           : hsla(30,  100%, 50%,  1);
+$yellow           : hsla(60,  100%, 50%,  1);
+$green            : hsla(120, 100%, 50%,  1);
+$cyan             : hsla(180, 100%, 50%,  1);
+$blue             : hsla(240, 100%, 50%,  1);
+$pink             : hsla(300, 100%, 50%,  1);
+
+$black            : hsla(0,   0%,   0%,   1);
+$gray             : hsla(0,   0%,   50%,  1);
+$white            : hsla(0,   0%,   100%, 1);
+
+$full             : 100%;
+$faded            : -40%;
+$off              : -70%;
+$slight           : -90%;
+
+$dark             : -25%;
+$darker           : -50%;
+$darkest          : -75%;
+$light            : 45%;
+$lighter          : 60%;
+$lightest         : 75%;
+$hint             : 90%;
+
+// ----------------------------------------------------------------------------
+// function
+
+@function color($color: $gray, $alpha: 1) {
+  $c    : $gray;
+  $s    : 0%;
+  $l    : 0%;
+
+  @if type-of($color) == 'color' {
+    @return rgba($color,$alpha);
+  } @else {
+    @if type-of($color) == 'number' {
+      $l: $color;
+    }
+    @if length($color) == 3 {
+      $s: nth($color,1);
+      $c: nth($color,2);
+      $l: nth($color,3);
+    }
+    @if length($color) == 2 {
+      @if type-of(nth($color,1)) == 'number' {
+        $s: nth($color,1);
+        $c: nth($color,2);
+      } @else {
+        $c: nth($color,1);
+        $l: nth($color,2);
+      }
+    }
+    @return rgba(scale-color($c, $saturation: $s, $lightness: $l), $alpha);
+  }
+}
+
+// ----------------------------------------------------------------------------
+// basic palette
+
+$base   : color($darker);
+$alt    : color($pink $dark);
+$accent : color($blue $dark);
+
+// ----------------------------------------------------------------------------
+// background
+
+@mixin back($bg: color($off $green $hint)) {
+  background: $bg image-url('noise.png');
+}

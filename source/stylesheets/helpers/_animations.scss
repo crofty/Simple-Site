@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------
+// Transitions
+
+%transition { @include transition(all 300ms); }
+
+%transition-main {
+  @include transition(
+    padding     300ms,
+    margin      300ms,
+    font-size   300ms,
+    line-height 300ms,
+    width       300ms,
+    background  300ms
+  );
+}
+
+// ----------------------------------------------------------------------------
+// Animations
+
+@include animate($keyframes: false);

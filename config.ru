@@ -4,6 +4,10 @@ require 'rack-rewrite'
 require 'rake-pipeline'
 require 'rake-pipeline/middleware'
 
+require 'modular-scale'
+require 'breakpoint'
+require 'animate'
+
 use Rake::Pipeline::Middleware, "Assetfile"
 
 use Rack::TryStatic,
