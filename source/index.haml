@@ -5,80 +5,167 @@
     %title Simple Site
     %link{href:'stylesheets/application.css', rel:"stylesheet", type:"text/css"}
   %body#index
-    .container
-      %h1 Typography
-
-      %h2 Headings
-      .example
-        %h1 h1. Heading 1
-        %h2 h2. Heading 2
-        %h3 h3. Heading 3
-        %h3 h4. Heading 4
-        %h3 h5. Heading 5
-        %h3 h6. Heading 6
-
-      %h2 Body copy
-      .example
-        %p Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-        %p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-        %p Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-
-      %h1 Buttons
-      .example
-        %p
-          %button.btn Default (button)
-          %a.btn Default (a)
-
-      %h1 Forms
-      %h2 Default styles
-      .example
-        %form
-          %legend Legend
-          %label Label name
-          %input{type: 'text', placeholder: 'Type something..'}
-          %span.help-block Example block-level help text here.
-          %label.checkbox
-            %input{type: 'checkbox'} Check me out
-          %button.btn Submit
-
-      %h2 Inline form
-      .example
-        %form.form-inline
-          %input{type: 'text', placeholder: 'Email'}
-          %input{type: 'password', placeholder: 'Password'}
-          %label.checkbox
-            %input{type: 'checkbox'} Remember me
-          %button.btn Sign in
-
-      %h2 Horizontal form
-      .example
-        %form.form-horizontal
-          .control-group
-            %label.control-label Email
-            .controls
-              %input{type: 'text', placeholder: 'Email'}
-          .control-group
-            %label.control-label Password
-            .controls
-              %input{type: 'password', placeholder: 'Password'}
-          .control-group
-            .controls
-              %label.checkbox
-                %input{type: 'checkbox'} Remember me
-              %button.btn Sign in
-
-      %h2 Extended form controls
-      .example
-        .input-append
-          %input.span2{type: 'text'}
-          %button.btn Go!
-
-      %h3 Search form
-      .example
-        %form.form-search
-          .input-append
-            %input.search-query{type: 'text'}
-            %button.btn Search
-
-
-    %script{type:'text/javascript', src:'/javascripts/compiled.js'}
+    %a#toggle{:title => "show/hide controls"} show/hide controls
+    .controls
+      %nav.pagenav
+        %ul.page-list
+          %li.prev
+            %a{:rel => "prev", :title => "no previous pages"} Previous
+          %li.next
+            %a{"data-id" => "title", :href => "title.html", :rel => "next", :title => "next page"} Next
+      %nav{:role => "navigation"}
+        %ul.meta
+          %li
+            %a{:href => "/", :rel => "home", :title => "Home"} Into the Green Green Mud
+          %li
+            %a{:href => "/contents.html", :rel => "contents", :title => "Table of Contents"}
+              Table of Contents
+          /
+            <li>
+            <a href="/about.html" title="About">About</a>
+            </li>
+        %ol.breadcrumb
+          %li.crumb
+            %a{:href => "/"} Into the Green Green Mud
+    %nav#toc
+      .wrap
+        %section.toc-dancing
+          %h3.book
+            %a{:href => "/dancing-without-architecture/"}
+              Dancing Without Architecture.
+          %ol
+            %li
+              %a{:href => "/dancing-without-architecture/in-which-jj/"}
+                In Which:
+                = succeed "." do
+                  %span.caps JJ
+            %li
+              %a{:href => "/dancing-without-architecture/daymares-poor-boy/"}
+                Daymares, Poor Boy.
+            %li
+              %a{:href => "/dancing-without-architecture/the-susy-within/"}
+                The Susy Within.
+            %li
+              %a{:href => "/dancing-without-architecture/yes-mother-goodnight/"}
+                Yes Mother, Goodnight.
+            %li
+              %a{:href => "/dancing-without-architecture/bring-down-the-house-house/"}
+                Bring Down the House House.
+            %li
+              %a{:href => "/dancing-without-architecture/dance-together-and-cry/"}
+                Dance Together and Cry.
+            %li
+              %a{:href => "/dancing-without-architecture/forever-amen/"}
+                Forever Amen.
+            %li
+              %a{:href => "/dancing-without-architecture/twice-three-plus-one/"}
+                Twice Three, Plus One.
+            %li
+              %a{:href => "/dancing-without-architecture/love-in-the-time-of-dandelions/"}
+                Love in the Time of Dandelions.
+            %li
+              %a{:href => "/dancing-without-architecture/those-nice-bright-colors/"}
+                Those Nice Bright Colors.
+            %li
+              %a{:href => "/dancing-without-architecture/into-the-green-green-mud/"}
+                Into the Green Green Mud.
+            %li
+              %a{:href => "/dancing-without-architecture/given-time-silence/"}
+                Given Time, Silence.
+        %section.toc-everafter
+          %h3.book
+            %a{:href => "/this-everafter-life/"}
+              This EverAfter Life.
+          %ol
+            %li
+              %a{:href => "/this-everafter-life/stranger-than-a-sunny-day-on-the-beach/"}
+                Stranger than a Sunny Day on the Beach.
+            %li
+              %a{:href => "/this-everafter-life/once-upon-a-sunday-raining/"}
+                Once upon a Sunday Raining.
+            %li
+              %a{:href => "/this-everafter-life/open-and-empty/"}
+                Open and Empty.
+            %li
+              %a{:href => "/this-everafter-life/not-a-susy-in-sight-for-miles-and-miles/"}
+                Not a Susy in Sight for Miles and Miles.
+            %li
+              %a{:href => "/this-everafter-life/of-blood/"}
+                Of Blood.
+            %li
+              %a{:href => "/this-everafter-life/anon-and-anon/"}
+                Anon and Anon.
+            %li
+              %a{:href => "/this-everafter-life/why-cry-when-you-can-kick-a-cat/"}
+                Why Cry when You Can Kick a Cat?
+            %li
+              %a{:href => "/this-everafter-life/there-and-back-again-forever/"}
+                There and Back Again, Forever.
+            %li
+              %a{:href => "/this-everafter-life/nothing/"}
+                Nothing.
+            %li
+              %a{:href => "/this-everafter-life/under-the-sky-is-gray/"}
+                Under the Sky is Gray.
+            %li
+              %a{:href => "/this-everafter-life/still/"}
+                Still.
+            %li
+              %a{:href => "/this-everafter-life/whence-from-two/"}
+                Whence, from Two.
+            %li
+              %a{:href => "/this-everafter-life/this-road-full-glittered/"}
+                This Road Full Glittered.
+            %li
+              %a{:href => "/this-everafter-life/over-un-thought-waters/"}
+                Over Un-Thought Waters.
+    %section#home.page.frontmatter{"data-body-class" => "", "data-url" => "index.html"}
+      %header{:role => "banner"}
+        %hgroup.site-title
+          %h1
+            %a{:href => "/"} Into the Green Green Mud
+          %h2
+            %a{:href => "/about.html"} a novel (with pictures)
+      .template
+        .content{:role => "main"}
+          .intro
+            /[if lt IE 9]
+              <p class="warning">
+              For the full experience,
+              please upgrade to
+              a <a href="http://browsehappy.com/">modern browser</a>.
+              </p>
+            %h2 Eternity is a fickle thing.
+            %p
+              This is a love story,
+              and an after-love story.
+              The text has been written,
+              and
+              = succeed "," do
+                %a{:href => "/about.html"} we’re calling it a novel
+              but the music, images, animations, and code
+              are still being developed.
+              You can watch it all unfold right here.
+          %aside.instructions
+            %p.inst.turn
+              %b Swipe
+              or use the
+              %b arrow keys
+              to turn the page.
+      %footer{:role => "contentinfo"}
+        .footer
+          %p.license
+            %a{:href => "http://creativecommons.org/licenses/by-nc-sa/3.0/", :rel => "license"} Copyright ©
+            2006-2012
+            %a.author{:href => "/about.html"} Eric A. Meyer
+          %ul.social
+            %li
+              %a{:href => "http://eric.andmeyer.com/", :title => "blog"} blog
+            %li
+              %a{:href => "http://twitter.com/eriiicam/", :title => "twitter"} twitter
+            %li
+              %a{:href => "http://facebook.com/greengreenmud/", :title => "facebook"} facebook
+            %li
+              %a{:href => "http://vimeo.com/album/1858141/", :title => "video"} video
+            %li
+              %a{:href => "http://github.com/oddbird/greenmud/", :title => "code on github"} github
