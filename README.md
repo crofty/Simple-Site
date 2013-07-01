@@ -4,7 +4,7 @@ A bootstrap folder that I use when throwing together simple sites.  This allows 
 
 To run the site locally with 
 
-    bundle exec rackup config.ru
+    foreman start
 
 If you want to compile the assets without running the server, run
 
