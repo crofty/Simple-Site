@@ -1,0 +1,65 @@
+// Set baseline font size & line height
+// See http://compass-style.org/reference/compass/typography/vertical_rhythm/#mixin-establish-baseline
+@include establish-baseline;
+
+// Set box-sizing: border-box and set the $border-box-sizing variable used internally by Susy
+// See http://susy.oddbird.net/guides/reference/#ref-border-box-mixin
+// @include border-box-sizing;
+
+// The basics
+html {
+  font-family: $sans-font-stack;
+  height: 100%;
+}
+
+body {
+  background-color: $background-color;
+  color: $grey;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  &:hover,&:focus{
+    color: $orange;
+  }
+}
+
+p {
+  @include leader(0);
+  @include trailer(1);
+  &:last-child {
+    @include trailer(0)
+  }
+}
+
+ul,ol {
+  @include leader(0);
+  @include trailer(1);
+  padding-left: rhythm(1.5);
+  
+  li {
+    @include trailer(0);
+  }
+}
+
+$h1-size: 32px;
+h1, .h1 {
+  @include adjust-font-size-to($h1-size);
+  @include leader(0);
+  @include trailer(0, $h1-size);
+}
+
+$h2-size: 24px;
+h2, .h2 {
+  @include adjust-font-size-to($h2-size);
+  @include leader(0);
+  @include trailer(0, $h2-size);
+}
+
+$h3-size: 24px;
+h3, .h3 {
+  @include adjust-font-size-to($h3-size);
+  @include leader(0);
+  @include trailer(0, $h3-size);
+}
