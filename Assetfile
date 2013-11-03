@@ -11,7 +11,7 @@ input "source" do
   end
 
   match "*.coffee" do
-    filter Rake::Pipeline::Web::Filters::CoffeeScriptFilter
+    filter Rake::Pipeline::Web::Filters::CoffeeScriptFilter, no_wrap: true
   end
 
   match "**/*.js" do
