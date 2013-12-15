@@ -6,89 +6,7 @@
 
 @import "base/elements";
 
-// Complex AG tests
-// ----------------
-
-@mixin ag-test(
-  $class
-) {
-  .#{$class} {
-    @include container(show);
-    @include leader(.5);
-    @include trailer(.5);
-
-    > .size1of5 {
-      min-height: rhythm(10);
-      &:first-of-type { @include span(2 at 1); }
-      ~ .size1of5 { @include span(last 2); }
-    }
-    > .size3of5 {
-      @include span(6 at 3 container);
-      > .size1of2 {
-        &:first-child { @include span(3 at 1 of nested(6 at 3)); }
-        + .size1of2 { @include span(last 3 of nested(6 at 3)); }
-      }
-      > .full {
-        clear: both;
-        background: none;
-      }
-    }
-
-    .full {
-      @include nested(6 at 3) {
-        .size1of3 {
-          @include span(first 2);
-          min-height: rhythm(6.5);
-        }
-        .size2of3 {
-          @include span(4 omega container);
-        }
-      }
-    }
-
-    .size2of3 {
-      .size1of2 {
-        @include nested(4 at 5) {
-          &:first-child { @include span(2 alpha); }
-          + .size1of2 { @include span(last 2); }
-        }
-      }
-      .full {
-        clear: both;
-      }
-    }
-
-    .gallery {
-      div {
-        @include gallery(2);
-      }
-    }
-  }
-}
-
-// Symmetrical
-// -----------
-
-$a-grid: 10 (4em 1em) before;
-
-@include use-grid(append($a-grid, show-baseline)) {
-  @include ag-test(symmetrical-before);
-}
-
-$a-grid: 10 (4em 1em) after; 
-@include use-grid(append($a-grid, show-baseline)) {
-  @include ag-test(symmetrical-after);
-}
-
-$a-grid: 10 (4em 1em) split; 
-@include use-grid(append($a-grid, show-baseline)) {
-  @include ag-test(symmetrical-split);
-}
-
-$a-grid: 10 (4em 1em) inside; 
-@include use-grid(append($a-grid, show-baseline)) {
-  @include ag-test(symmetrical-inside);
-}
+@import "compass/css3/box";
 
 
 h1 {
@@ -96,30 +14,38 @@ h1 {
   color: #eee;
   text-transform: uppercase;
 }
-h1, h2, h3 {
-  clear: both;
-  padding: rhythm(.5);
-  font-weight: bold;
+
+body{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  @include display-box;
+  @include box-orient(vertical);
 }
 
-.grid-element {
-  @include trailer(.5);
-  opacity: .5;
-  min-height: rhythm(3);
+header{
+  @include box-flex(1);
 }
 
-.size1of2 { background: #f99; }
-.size1of5 { background: #aef; }
-.size1of3 { background: orange; }
-.full.grid-element { background: pink; }
 
-.gallery {
-  @include clearfix;
-  clear: both;
-  div {
-    @include trailer(.5);
-    height: rhythm(1);
-    background: rgba(red,.25);
-    outline: 1px dotted red;
-  }
+#main{
+  @include display-box;
+  @include box-orient(horizontal);
+  // @include box-align(stretch);
+  @include box-flex(1);
+  width: 100%;
+}
+
+#sidebar {
+  @include box-flex(1);
+  overflow-y: scroll;
+}
+
+#map {
+  // @include display-box;
+  @include box-flex(5);
+  background-color: red;
 }

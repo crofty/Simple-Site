@@ -5,39 +5,11 @@
     %title Simple Site
     %link{href:'stylesheets/application.css', rel:"stylesheet", type:"text/css"}
   %body
-    - [['symmetrical-before', '10 (4em 1em) before'],['symmetrical-after', '10 (4em 1em) after'], ['symmetrical-split', '10 (4em 1em) split'], ['symmetrical-inside', '10 (4em 1em) inside']].each do |class_name, description|
-      %div.container{class: class_name}
-        %h1= description
-        %h2 AG Test
-        .size1of5.grid-element
-          %h3 1/5
-        .size1of5.grid-element
-          %h3 1/5
-        .size3of5
-          .size1of2.grid-element
-            %h3 1/2
-          .size1of2.grid-element
-            %h3 1/2
-          .full
-            .size1of3.grid-element
-              %h3 1/3
-            .size2of3
-              .size1of2.grid-element
-                %h3 1/2
-              .size1of2.grid-element
-                %h3 1/2
-              .full.grid-element
-                %h3 1
-        %h2 Gallery
-        .gallery
-          %div
-          %div
-          %div
-          %div
-          %div
-          %div
-          %div
-          %div
-          %div
-          %div
-    %script{src:'javascripts/compiled.js', type:"text/javascript"}
+    %header
+      %h1 Orangetrack
+    #main
+      #sidebar
+        %ul
+          - 40.times do
+            %li Sidebar
+      #map
