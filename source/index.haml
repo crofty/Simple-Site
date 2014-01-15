@@ -7,9 +7,13 @@
   %body
     %header
       %h1 Orangetrack
-    #main
-      #sidebar
-        %ul
-          - 40.times do
-            %li Sidebar
-      #map
+    .grid
+      #app
+        #main
+          #sidebar
+            .sidebar
+              %ul
+                - 40.times do
+                  %li Sidebar
+          #map-container
+            #map
